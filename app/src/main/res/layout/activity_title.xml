@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <!--<variable
+            name=""
+            type="" />-->
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TitleActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textSize="@dimen/title_app_name_textSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/btn_random_type"
+            layout="@layout/layout_title_type_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/title_type_button_margin"
+            app:layout_constraintBottom_toTopOf="@id/btn_choice_type"
+            app:layout_constraintEnd_toEndOf="@id/btn_choice_type"
+            app:layout_constraintStart_toStartOf="@id/btn_choice_type"
+            bind:description="@{@string/random_type}" />
+
+        <include
+            android:id="@+id/btn_choice_type"
+            layout="@layout/layout_title_type_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/title_type_button_margin"
+            app:layout_constraintBottom_toTopOf="@id/btn_freeform_type"
+            app:layout_constraintEnd_toEndOf="@id/btn_freeform_type"
+            app:layout_constraintStart_toStartOf="@id/btn_freeform_type"
+            bind:description="@{@string/choice_type}" />
+
+        <include
+            android:id="@+id/btn_freeform_type"
+            layout="@layout/layout_title_type_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/title_type_button_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            bind:description="@{@string/freeform_type}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

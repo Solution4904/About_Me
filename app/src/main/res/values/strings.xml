@@ -1,3 +1,9 @@
 <resources>
+    <!--Common-->
     <string name="app_name">About_Me</string>
+
+    <!--Title-->
+    <string name="random_type">랜덤 형식</string>
+    <string name="choice_type">선택 형식</string>
+    <string name="freeform_type">자유 형식</string>
 </resources>
