@@ -2,7 +2,11 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
 
-    id ("kotlin-kapt")
+    kotlin("kapt")
+    id("kotlin-kapt")
+
+    // Hilt
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -40,7 +44,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -49,4 +52,11 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // ViewModel
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+
+    // Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
 }

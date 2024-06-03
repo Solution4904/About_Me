@@ -6,16 +6,18 @@
 
     <data>
 
-        <!--<variable
-            name=""
-            type="" />-->
+        <import type="com.solution.about_me.event.TitleUIEvent" />
+
+        <variable
+            name="vm"
+            type="com.solution.about_me.viewmodel.TitleViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".TitleActivity">
+        tools:context=".feature.TitleActivity">
 
         <TextView
             android:layout_width="match_parent"
@@ -34,6 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/title_type_button_margin"
+            android:onClick="@{() -> vm.sendEvent(TitleUIEvent.ClickTest.INSTANCE)}"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@id/btn_choice_type"
             app:layout_constraintEnd_toEndOf="@id/btn_choice_type"
@@ -61,6 +64,16 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             bind:description="@{@string/freeform_type}" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->vm.sendEvent(TitleUIEvent.ClickTest.INSTANCE)}"
+            android:text="Test Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
