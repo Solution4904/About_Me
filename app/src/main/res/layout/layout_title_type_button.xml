@@ -7,6 +7,11 @@
         <variable
             name="description"
             type="String" />
+
+        <variable
+            name="vm"
+            type="com.solution.about_me.viewmodel.TitleViewModel" />
+
     </data>
 
     <LinearLayout

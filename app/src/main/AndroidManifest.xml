@@ -22,7 +22,7 @@
             android:name=".QuestionAndAnswerActivity"
             android:exported="false" />
         <activity
-            android:name=".TitleActivity"
+            android:name=".feature.TitleActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
