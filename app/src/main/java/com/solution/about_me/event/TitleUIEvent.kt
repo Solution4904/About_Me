@@ -1,5 +1,7 @@
 package com.solution.about_me.event
 
 sealed class TitleUIEvent : UIEvent {
-    object ClickTest : TitleUIEvent()
+    object EnterRandomType : TitleUIEvent()
+    object EnterChoiceType : TitleUIEvent()
+    object EnterFreeformType : TitleUIEvent()
 }
