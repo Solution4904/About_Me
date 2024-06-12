@@ -32,7 +32,15 @@ class TitleActivity : BaseDataBinding<ActivityTitleBinding>(R.layout.activity_ti
             viewModel.eventFlow.flowWithLifecycle(lifecycle).collect { uiEvent ->
                 Log.d("TAG", "$uiEvent")
                 when (uiEvent) {
-                    is TitleUIEvent.ClickTest -> {
+                    is TitleUIEvent.EnterRandomType -> {
+                        Log.d("TAG", "initObservers: $uiEvent")
+                    }
+
+                    is TitleUIEvent.EnterChoiceType -> {
+                        Log.d("TAG", "initObservers: $uiEvent")
+                    }
+
+                    is TitleUIEvent.EnterFreeformType -> {
                         Log.d("TAG", "initObservers: $uiEvent")
                     }
 

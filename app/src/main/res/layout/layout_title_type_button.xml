@@ -10,7 +10,11 @@
 
         <variable
             name="vm"
-            type="com.solution.about_me.viewmodel.TitleViewModel" />
+            type="com.solution.about_me.base.BaseViewModel" />
+
+        <variable
+            name="event"
+            type="com.solution.about_me.event.UIEvent" />
 
     </data>
 
@@ -22,6 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:onClick="@{() -> vm.sendEvent(event)}"
             android:text="@{description}"
             android:textSize="@dimen/title_type_button_textSize"
             tools:text="가나다라마바사" />

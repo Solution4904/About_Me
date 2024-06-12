@@ -36,12 +36,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/title_type_button_margin"
-            android:onClick="@{() -> vm.sendEvent(TitleUIEvent.ClickTest.INSTANCE)}"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@id/btn_choice_type"
             app:layout_constraintEnd_toEndOf="@id/btn_choice_type"
             app:layout_constraintStart_toStartOf="@id/btn_choice_type"
-            bind:description="@{@string/random_type}" />
+            bind:description="@{@string/random_type}"
+            bind:event="@{TitleUIEvent.EnterRandomType.INSTANCE}"
+            bind:vm="@{vm}" />
 
         <include
             android:id="@+id/btn_choice_type"
@@ -52,7 +53,9 @@
             app:layout_constraintBottom_toTopOf="@id/btn_freeform_type"
             app:layout_constraintEnd_toEndOf="@id/btn_freeform_type"
             app:layout_constraintStart_toStartOf="@id/btn_freeform_type"
-            bind:description="@{@string/choice_type}" />
+            bind:description="@{@string/choice_type}"
+            bind:event="@{TitleUIEvent.EnterChoiceType.INSTANCE}"
+            bind:vm="@{vm}" />
 
         <include
             android:id="@+id/btn_freeform_type"
@@ -63,17 +66,9 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            bind:description="@{@string/freeform_type}" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{()->vm.sendEvent(TitleUIEvent.ClickTest.INSTANCE)}"
-            android:text="Test Button"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            bind:description="@{@string/freeform_type}"
+            bind:event="@{TitleUIEvent.EnterFreeformType.INSTANCE}"
+            bind:vm="@{vm}" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
