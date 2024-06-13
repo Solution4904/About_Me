@@ -24,18 +24,11 @@ class TitleActivity : BaseDataBinding<ActivityTitleBinding>(R.layout.activity_ti
         initObservers()
     }
 
-    /* 2024-06-03
-    * TODO: 이벤트는 정상이였다... xml에서 include로 사용 중인 버튼에 이벤트가 안 걸리는 문제였는데 개 헛고생했다. include로 넣은 버튼에 클릭 이벤트 거는 방법 알아내서 적용시킬 것
-    */
     private fun initObservers() {
         lifecycleScope.launch {
             viewModel.eventFlow.flowWithLifecycle(lifecycle).collect { uiEvent ->
                 Log.d("TAG", "$uiEvent")
                 when (uiEvent) {
-                    is TitleUIEvent.EnterRandomType -> {
-                        Log.d("TAG", "initObservers: $uiEvent")
-                    }
-
                     is TitleUIEvent.EnterChoiceType -> {
                         Log.d("TAG", "initObservers: $uiEvent")
                     }
