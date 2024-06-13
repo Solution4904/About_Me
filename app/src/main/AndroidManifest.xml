@@ -13,6 +13,9 @@
         android:theme="@style/Theme.About_Me"
         tools:targetApi="31">
         <activity
+            android:name=".feature.QuestionRandomActivity"
+            android:exported="false" />
+        <activity
             android:name=".feature.QuestionChoiceActivity"
             android:exported="false" />
         <activity
