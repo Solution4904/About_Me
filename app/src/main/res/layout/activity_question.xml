@@ -5,13 +5,29 @@
 
     <data>
 
+        <variable
+            name="tempType"
+            type="String" />
+
+        <variable
+            name="vm"
+            type="com.solution.about_me.viewmodel.QuestionViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".feature.QuestionChoiceActivity">
+        tools:context=".feature.QuestionActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{tempType}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"

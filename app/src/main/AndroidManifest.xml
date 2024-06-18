@@ -16,7 +16,7 @@
             android:name=".feature.QuestionRandomActivity"
             android:exported="false" />
         <activity
-            android:name=".feature.QuestionChoiceActivity"
+            android:name=".feature.QuestionActivity"
             android:exported="false" />
         <activity
             android:name=".ResultActivity"
