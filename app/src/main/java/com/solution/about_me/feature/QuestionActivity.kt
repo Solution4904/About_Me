@@ -72,4 +72,8 @@ class QuestionActivity : BaseDataBinding<ActivityQuestionBinding>(R.layout.activ
     private fun EnterFreeformActivity() {
 
     }
+
+    private fun SetActivity(){
+
+    }
 }
